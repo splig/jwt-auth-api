@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
-const Route = use('Route')
+const Route = use('Route');
 
 Route.group(() => {
-  Route.post('login', 'Auth/AuthenticationController.login')
-  Route.post('register', 'Auth/AuthenticationController.register')
-  Route.get('me', 'Auth/AuthenticationController.me').middleware(['auth'])
-}).prefix('api')
+  Route.post('login', 'Auth/AuthenticationController.login');
+  Route.post('register', 'Auth/AuthenticationController.register');
+  Route.get('me', 'Auth/AuthenticationController.me').middleware(['auth']);
+}).prefix('api');

@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
-const Model = use('Model')
-const Hash = use('Hash')
+const Model = use('Model');
+const Hash = use('Hash');
 
 class User extends Model {
   static boot () {
-    super.boot()
+    super.boot();
 
     /**
      * A hook to hash the user password before saving
@@ -13,9 +13,9 @@ class User extends Model {
      */
     this.addHook('beforeSave', async userInstance => {
       if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password)
+        userInstance.password = await Hash.make(userInstance.password);
       }
-    })
+    });
   }
 
   /**
@@ -29,15 +29,15 @@ class User extends Model {
    * @return {Object}
    */
   tokens () {
-    return this.hasMany('App/Models/Token')
+    return this.hasMany('App/Models/Token');
   }
 
   /**
    * Hide password when user is fetched.
    */
   static get hidden () {
-    return ['password']
+    return ['password'];
   }
 }
 
-module.exports = User
+module.exports = User;

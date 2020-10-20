@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace.js test"
   },
   "keywords": [
     "adonisjs",
@@ -16,17 +16,22 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@adonisjs/ace": "^5.0.2",
+    "@adonisjs/ace": "^7.1.5",
+    "@adonisjs/application": "^3.0.19",
     "@adonisjs/auth": "^3.0.5",
-    "@adonisjs/bodyparser": "^2.0.3",
+    "@adonisjs/bodyparser": "^5.0.4",
+    "@adonisjs/core": "^5.0.2-beta-rc-8",
     "@adonisjs/cors": "^1.0.6",
     "@adonisjs/fold": "^4.0.8",
     "@adonisjs/framework": "^5.0.7",
     "@adonisjs/ignitor": "^2.0.6",
-    "@adonisjs/lucid": "^5.0.4",
-    "sqlite3": "^4.0.1"
+    "@adonisjs/lucid": "^9.0.0",
+    "acorn": "^8.0.4",
+    "sqlite3": "^4.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.11.0"
+  },
   "autoload": {
     "App": "./app"
   }
